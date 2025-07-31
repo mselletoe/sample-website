@@ -1,0 +1,60 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: #eeede7;
+  border-bottom: 1px solid #e8e6de;
+  .logo {
+    height: 40px;
+    margin-right: 0.75rem;
+  }
+  .brand {
+    color: #503217;
+    font-size: 2rem;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }
+  .navlinks {
+    display: flex;
+    gap: 2rem;
+    a {
+      color: #503217;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover {
+        color: #8f7d6a;
+      }
+    }
+  }
+  .actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    .cart-btn {
+      background: #503217;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.5rem 1.25rem;
+      font-size: 1rem;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      svg {
+        font-size: 1.25rem;
+      }
+      &:hover {
+        background: #d3744a;
+      }
+    }
+  }
+}

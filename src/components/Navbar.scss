@@ -1,0 +1,60 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: #eeede7;
+  border-bottom: 1px solid #e8e6de;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    img {
+      height: 40px;
+    }
+    span {
+      color: #503217;
+      font-size: 2rem;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 500;
+    }
+  }
+  .navbar-links {
+    display: flex;
+    gap: 2rem;
+    a {
+      color: #503217;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover {
+        color: #8f7d6a;
+      }
+    }
+  }
+  .navbar-actions {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      svg {
+        color: #503217;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+      }
+      &:hover svg {
+        color: #d3744a;
+      }
+    }
+  }
+}

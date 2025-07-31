@@ -1,68 +1,273 @@
+/* Figma MCP layout styles */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --color-bg: #eeede7;
+  --color-bg-shade: #e2dfcf;
+  --color-border: #e8e6de;
+  --color-white: #f2f2f2;
+  --color-badge-bg: #d3744a;
+  --color-heading: #503217;
+  --color-body: #8f7d6a;
+  --font-heading: 'Poppins', Arial, Helvetica, sans-serif;
+  --font-body: 'Sans Serif Collection', Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  background: var(--color-bg);
+  color: var(--color-body);
+  font-family: var(--font-body);
   min-width: 320px;
   min-height: 100vh;
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  margin: 0;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 80px;
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+  font-size: 70px;
+  line-height: 1.2;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+h3 {
+  font-size: 58px;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-heading);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-body);
+}
+
+.badge {
+  background: var(--color-badge-bg);
+  color: var(--color-white);
+  border-radius: 10px;
+  padding: 0.3em 1em;
+  font-size: 13px;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.card,
+.category,
+.newsletter,
+.testimonial,
+.cta,
+.product {
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(80, 50, 23, 0.04);
+  border: 1px solid var(--color-border);
+}
+
+button,
+.button {
+  border-radius: 10px;
+  border: 1px solid var(--color-heading);
+  padding: 0.75em 1.5em;
+  font-size: 18px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  background: var(--color-heading);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover,
+.button:hover {
+  background: var(--color-badge-bg);
+  color: var(--color-white);
+}
+
+.footer {
+  background: var(--color-bg-shade);
+  border-radius: 10px;
+  color: var(--color-body);
+  font-size: 18px;
+  padding: 2em 0;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility classes for layout (if not using Tailwind) */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-15 {
+  gap: 3.75rem;
+}
+
+.gap-30 {
+  gap: 7.5rem;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.leading-tight {
+  line-height: 1.2;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-loose {
+  line-height: 2;
+}
+
+/* Responsive font sizes (optional) */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 48px;
   }
-  a:hover {
-    color: #747bff;
+
+  h2 {
+    font-size: 38px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 22px;
+  }
+
+  body {
+    font-size: 16px;
   }
 }

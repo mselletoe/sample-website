@@ -1,0 +1,65 @@
+.hero {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 4rem 1rem 2rem 1rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 4rem;
+    padding: 6rem 2rem 3rem 2rem;
+  }
+  .hero-text {
+    flex: 1;
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+    h1 {
+      color: #503217;
+      font-size: 3rem;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
+    }
+    p {
+      color: #8f7d6a;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .shop-btn {
+      background: #503217;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2rem;
+      font-size: 1.125rem;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      &:hover {
+        background: #d3744a;
+      }
+    }
+  }
+  .hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    img {
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(80, 50, 23, 0.08);
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+}
